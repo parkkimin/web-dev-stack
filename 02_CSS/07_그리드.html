@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="07_그리드.css" />
+    <script
+      src="https://kit.fontawesome.com/ef885bd654.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--grid가 있어야 시작 할 수 있음-->
+  </head>
+  <body>
+    <h1>Grid</h1>
+    <h2>grid-template-colums/ rows</h2>
+    <div class="container" id="grid-basic">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <h2>gap(row-gap $ column-gap)</h2>
+    <div class="container" id="grid-gap">
+      <item class="item">1</item>
+      <item class="item">2</item>
+      <item class="item">3</item>
+      <item class="item">4</item>
+    </div>
+
+    <h2>grid-column / grid-row</h2>
+    <div class="container" id="grid-span">
+      <div class="item span1">1</div>
+      <div class="item span2">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+    <h2>grid-template-area</h2>
+    <div class="container" id="grid-area">
+      <div class="header">header</div>
+      <div class="nav">nav</div>
+      <div class="main">main</div>
+      <div class="sidebar">sideber</div>
+      <div class="footbar">footbar</div>
+    </div>
+    <h2>auto-fit</h2>
+    <div class="container" id="auto-fit">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <h2>auto-fill</h2>
+    <div class="container" id="auto-fill">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <h2>align-items / justify-items</h2>
+    <div class="container" id="items">
+      <div class="item"><i class="fas fa-face-smile"></i></div>
+      <div class="item"><i class="fas fa-face-smile"></i></div>
+      <div class="item"><i class="fas fa-face-smile"></i></div>
+    </div>
+    <h2>aling-content/ justify-content</h2>
+    <div class="container" id="content">
+      <div class="item"><i class="fa-solid fa-file"></i></div>
+      <div class="item"><i class="fa-solid fa-font-awesome"></i></div>
+      <div class="item"><i class="fa-solid fa-folder"></i></div>
+      <div class="item"><i class="fa-solid fa-filter"></i></div>
+      <div class="item"><i class="fa-solid fa-gear"></i></div>
+    </div>
+  </body>
+</html>
