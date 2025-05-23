@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>변수와 연산자</h1>
+    <h2>1. var,let,const</h2>
+    <script>
+      // 변수:값을 담는 공간
+      //  변수명=값
+
+      //   var: 옛날 버전(사용 x)
+      var oldVar = 1;
+      oldVar = "변경";
+      console.log(oldVar);
+
+      // let: 일반 변수 선언(가끔)
+      let nickname = "성예찬";
+      nickname = "이상엽";
+      console.log(nickname);
+
+      // const: 상수 선언(변하지 않는 값, 자주 사용)
+      const name = "조규상";
+      //   name = "최다인";
+      console.log(name);
+    </script>
+
+    <h2>2. 자료형과 typeof</h2>
+    <script>
+      const userId = "최다인"; // 문자열 - string
+      const age = 15; //숫자 - unmber
+      const check = true; //ture, false - 논리형 (참,거짓) - boolean
+      let unknown; //값이 정의되지 않음 - undefined
+      let isNone = null; // 값이 없음 - null
+      console.log(typeof userId);
+      console.log(age);
+      console.log(check);
+      console.log(unknown);
+      console.log(isNone);
+
+      let test = "test";
+      console.log(typeof test);
+      test = 123;
+      test = false;
+      console.log(typeof test);
+    </script>
+
+    <h2>3. 문자열 & 템플릿 리터럴</h2>
+    <script>
+      const hobby = "음악";
+      console.log("내 취미는 " + hobby + "  입니다.");
+      console.log(`내 취미는 ${hobby} 입니다.`);
+
+      const escape = '내 이름은"문채은"입니다.';
+      console.log(escape);
+    </script>
+
+    <h2>4. 숫자</h2>
+    <script>
+      const um1 = 10;
+      const um2 = 3;
+      console.log("더하기: ", um1 + um2); //더하기 13
+      console.log("빼기:", um1 - um2); // 빼기7
+      console.log("곱하기", um1 * um2); // 곱하기 30
+      console.log("나누기", um1 / um2); // 나누기 3.33333
+      console.log("나머지:", um1 % um2); //나머지 1
+      console.log("제곱", um1 ** um2); // 제곱 1000
+
+      //   문자열 -> 숫자로 바꿈
+      console.log(typeof Number("100")); //100
+      console.log(Number("Hellow")); //NaN
+
+      // 숫자-> 문자열로 바꿈
+      console.log(String(300));
+
+      // 소수 제거 -> 정수로 바꿈
+      console.log(parseInt(3.9)); //3
+
+      //문자열->실수
+      console.log(parseFloat("4.2"));
+    </script>
+    <h2>5. Boolean과 비교 연산자</h2>
+    <script>
+      console.log(true);
+      console.log(false);
+
+      //Boolean 변환
+      console.log(Boolean("World"));
+      console.log(Boolean("")); // 문자열에서 문자가 비여있으면 false
+
+      console.log(Boolean(0));
+      console.log(Boolean(1));
+
+      const a = 100;
+      const b = "100";
+      //100이랑 100이랑 같아?
+      console.log(a == b); // true
+      //숫자100이랑 문자100이랑 같니?(타입까지 본다)
+      console.log(a === b); //false
+      console.log(a === Number(b));
+
+      // !=, !== : 같지 않니?
+      console.log(a != b);
+      console.log(a !== b);
+
+      const c = 200;
+      console.log(a < c); // true
+      console.log(a > c); //false
+      console.log(a >= c); //false
+      console.log(a <= c); //true
+
+      //연습
+      console.log("0" == 0); //true
+      console.log("0" === 0); //false
+      console.log(Boolean("")); // false;
+      console.log(Boolean("0")); // true
+    </script>
+
+    <h2>6. 논리 연산자</h2>
+    <script>
+      const x = 10;
+      const y = 20;
+
+      //and : 둘다 true
+      console.log(x < 15 && y > 10); //true
+      console.log(x > 15 && y > 10); //false
+      //or:하나만 true여도 true
+      console.log(x < 15 || y > 10); //true
+      //not: 부정 == (!)
+      console.log(!false); //true
+      console.log(!!true); //true
+
+      console.log("JaveScript" && 12345);
+      console.log(null || "js");
+    </script>
+  </body>
+</html>
