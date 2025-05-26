@@ -23,10 +23,8 @@
         <script>
           const scores = [85, 98, 99, 76, 82];
           // [30, 50]
-          scores.splice("socores");
+          scores.splice(0, 5, 30, 50);
           console.log(scores);
-          const scores2 = [30, 50];
-          console.log(JSON.stringify(scores2)); //
         </script>
       </li>
 
@@ -35,8 +33,11 @@
         <script>
           const music = ["가요", "팝송", "클래식", "재즈", "OST"];
           // [팝송, 클래식, 재즈]
+
+          console.log(music.slice(1, 4));
           // [OST]
-          console.log(music[music.length]);
+          console.log(music[music.length - 1]);
+          console.log(music.slice(4));
         </script>
       </li>
 
@@ -44,7 +45,9 @@
         아래 배열을 오름차순으로 정렬하시오.
         <script>
           const numbers = [7, -24, -8, 10, 17, -58];
-          // [-58, -24, -8, 7, 10, 17]\
+          // [-58, -24, -8, 7, 10, 17]
+          numbers.sort((a, b) => a - b);
+          console.log(numbers);
         </script>
       </li>
 
@@ -52,7 +55,7 @@
         배열에서 "B"의 인덱스를 찾아 출력하시오.
         <script>
           const letters = ["A", "B", "C"];
-          console.log(letters[letters.indexOf("B")]);
+          console.log(letters.indexOf("B"));
         </script>
       </li>
 
@@ -71,10 +74,8 @@
         <script>
           const dupArr = [1, 2, 2, 3, 3, 3];
           // [1, 2, 3]
-          const dupArr2 = new Set(dupArr);
-          console.log(dupArr2);
-          const dupArr3 = [...dupArr2];
-          console.log = dupArr3;
+          const unique = [...new Set(dupArr)];
+          console.log(unique);
         </script>
       </li>
     </ol>
