@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+header h2 {
+  font-weight: bold;
+}
+p {
+  font-weight: lighter;
+}
+main img {
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  height: 100px;
+  margin: 5px;
+}
+aside {
+  font-weight: bold;
+  font-style: oblique;
+}
+button {
+  border-radius: 3px;
+}
+#click {
+  background: orange;
+}
+#restart {
+  background: navy;
+}

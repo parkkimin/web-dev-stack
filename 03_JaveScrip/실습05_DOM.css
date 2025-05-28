@@ -1,13 +1,26 @@
-body {
-  height: 100%;
+* {
   margin: 0;
-  padding: 0;
-  background-color: yellow;
 }
-
-h2 {
-  text-align: center;
+body {
+  /* 플렉스 박스 참고  */
+  background: cornflowerblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+h2,
+h3,
 p {
-  text-align: center;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: ;
+}
+h2 {
+  font-size: ;
+}
+h3 {
+  font-size: ;
 }
