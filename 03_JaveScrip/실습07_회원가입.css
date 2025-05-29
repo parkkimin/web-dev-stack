@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.box {
+  border: 1px solid black;
+  width: 400px;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.692);
+}
+
+p {
+  margin-left: 15px;
+  font-size: 10px;
+  text-align: left;
+  font-weight: lighter;
+}
+input {
+  width: 350px;
+}
+button {
+  font-size: 10px;
+  background: gray;
+  color: white;
+}
+button:last-child {
+  background: skyblue;
+}
