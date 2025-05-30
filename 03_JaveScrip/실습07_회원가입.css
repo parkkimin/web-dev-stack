@@ -1,33 +1,47 @@
 body {
+}
+h2 {
   text-align: center;
+}
+form,
+#form {
+  border: 1px solid;
+  padding: 10px;
+  width: 70%;
+  margin: auto;
+}
+form div,
+#form div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-.box {
-  border: 1px solid black;
-  width: 400px;
-  padding: 10px;
-  color: rgba(0, 0, 0, 0.692);
-}
-
-p {
-  margin-left: 15px;
-  font-size: 10px;
-  text-align: left;
-  font-weight: lighter;
 }
 input {
-  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  margin: 5px;
+}
+form span {
+  margin: 0px 5px 5px;
+}
+form .button {
+  flex-direction: row;
+  justify-content: center;
 }
 button {
-  font-size: 10px;
-  background: gray;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  background: lightgreen;
   color: white;
 }
-button:last-child {
-  background: skyblue;
+form .button button:disabled {
+  background: lightgray;
+}
+#logout {
+  display: block;
+  margin: auto;
 }
