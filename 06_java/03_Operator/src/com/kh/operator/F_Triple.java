@@ -19,7 +19,7 @@ public class F_Triple {
 		//f.method1();
 		//f.practice1();
 		//f.practice2();
-		f.practice3();
+		//f.practice3();
 
 	}
 	Scanner sc = new Scanner(System.in);
