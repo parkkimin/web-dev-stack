@@ -1,5 +1,5 @@
 package com.kh.practice1.model;
-
+// USER_INFO
 public class UserInfo {
 	public int userNo;
 	public String id;
@@ -8,16 +8,20 @@ public class UserInfo {
 	public String name;
 	public String phone;
 	public String addr;
-
-	public UserInfo() {
-	}
-
+	
+	public UserInfo() {}
+	
 	public String printName() {
 		return this.name;
-
 	}
-
+	
 	public void changeName(String name) {
 		this.name = name;
 	}
 }
+
+
+
+
+
+
