@@ -2,10 +2,9 @@ package com.kh.practice.model;
 
 import java.util.Arrays;
 
-// 캡슐화 -> Single Responsibility Principle(SRP원칙)
+// 캡슐화! -> Single Responsibility Principle (SRP 원칙)
 public class RockPaperScissor {
-	private String[] rps = {"가위","바위","보"};
-	
+	private String[] rps = {"가위", "바위", "보"};
 	private int win = 0;
 	private int lose = 0;
 	private int draw = 0;
@@ -58,9 +57,5 @@ public class RockPaperScissor {
 		return "RockPaperScissor [rps=" + Arrays.toString(rps) + ", win=" + win + ", lose=" + lose + ", draw=" + draw
 				+ "]";
 	}
-	
-	
-	
-	}
 
-
+}

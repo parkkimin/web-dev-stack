@@ -9,19 +9,21 @@ public class A_LogicalNegation {
 		 * !논리값(true, false)
 		 * 
 		 * - 논리값을 반대로 바꾸는 연산자 (true -> false, false -> true)
-		 * 
 		 * */
 		boolean isTrue = true;
 		boolean isFalse = false;
 		
-		System.out.println(!isTrue); //false
-		System.err.println(!isFalse);//true
+		System.out.println(!isTrue); // false
+		System.out.println(!isFalse); // true
 		
 		isTrue = !isFalse;
 		
-		System.out.println(!!!isTrue);
+		System.out.println(!!!isTrue); // false
 		
-
+		
+		
+		
+		
 	}
 
 }

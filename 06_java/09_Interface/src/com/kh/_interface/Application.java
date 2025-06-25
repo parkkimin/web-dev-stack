@@ -19,33 +19,39 @@ import com.kh._interface.step2.Tv;
  * - 인터페이스는 다중 상속(구현)을 허용한다
  * - 추상 클래스보다 더 강한 규칙성, 강제성을 가진다
  * 
- * 차이점 
- * - 추상 클래스 abstract 키워드로 클래스가 정의, 변수나 메서드 생성 가능
+ * * 차이점
+ * - 추상 클래스는 abstract 키워드로 클래스가 정의, 변수나 메서드 생성 가능
  * - 인터페이스는 interface 키워드로 정의, 변수나 메서드 생성 불가
  * 
  * extends와 implements
- * - 클래스 간의 상속: 자식클래스 extends 부모 클래스
- * - 클래스와 인턴페이스 간의 구현 : 구현 클래스 implements 인터페이스, 인터페이스,..
- * - 인터페이스 간의 상속 : 인터페이스 extends 인터페이스, 인터페이스,..
+ * - 클래스 간의 상속 : 자식 클래스 extends 부모 클래스
+ * - 클래스와 인터페이스 간의 구현 : 구현 클래스 implements 인터페이스, 인터페이스..
+ * - 인터페이스 간의 상속 : 인터페이스 extends 인터페이스, 인터페이스..
+ * 
  * */
 
 public class Application {
 
 	public static void main(String[] args) {
-			Vehicle bus = new Bus();
-			Vehicle taxi = new Taxi();
-			
-			bus.run();
-			taxi.trun();
-			
-			Tv tv = new Tv();
-			tv.turnOn();
-			tv.turnOff();
-			
-			Audio audio = new Audio();
-			audio.setVolume(-20);
-			audio.setVolume(55);
-			audio.setVolume(17);
+		Vehicle bus = new Bus();
+		Vehicle taxi = new Taxi();
+		
+		bus.run();
+		taxi.turn();
+		
+		Tv tv = new Tv();
+		tv.turnOn();
+		tv.turnOff();
+		
+		Audio audio = new Audio();
+		audio.setVolume(-20);
+		audio.setVolume(55);
+		audio.setVolume(17);
 	}
+	
+	
+	
+	
+	
 
 }

@@ -6,16 +6,23 @@ public class Manager extends Employee {
 	public Manager() {
 	}
 
-	public Manager(String name, int salarty, String dept) {
-		super(name, salarty);
+	public Manager(String name, int salary, String dept) {
+		super(name, salary);
+		this.dept = dept;
+	}
+
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
 		this.dept = dept;
 	}
 
 	@Override
 	public String toString() {
-		return "Manager [dept=" + dept + ", getName()=" + getName() + ", getSalarty()=" + getSalarty() + "]";
+		return "Manager [dept=" + dept + ", getName()=" + getName() + ", getSalary()=" + getSalary() + "]";
 	}
-
 
 	
 

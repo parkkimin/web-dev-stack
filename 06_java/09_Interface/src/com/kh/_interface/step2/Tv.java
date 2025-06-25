@@ -1,15 +1,15 @@
 package com.kh._interface.step2;
 
-public class Tv implements RemoteControl, Searchable{
+public class Tv implements RemoteControl, Searchable {
 
 	@Override
 	public void turnOn() {
-		System.out.println("TV를 켭니다");
+		System.out.println("TV를 켭니다.");
 	}
 
 	@Override
 	public void turnOff() {
-		System.out.println("TV를 끕니다");
+		System.out.println("TV를 끕니다.");
 	}
 
 	@Override
@@ -20,5 +20,5 @@ public class Tv implements RemoteControl, Searchable{
 	@Override
 	public void setVolume(int volume) {
 	}
-	
+
 }
