@@ -13,6 +13,11 @@ public class Member {
 	private String name;
 	private int age;
 	private int coupon;
-	//private ArrayList<Book> bookList = new ArrayList();
+	private ArrayList<Book> bookList = new ArrayList();
+	
+	public Member(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
 
 }
