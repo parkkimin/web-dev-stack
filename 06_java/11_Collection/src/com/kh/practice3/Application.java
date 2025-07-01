@@ -1,8 +1,10 @@
 package com.kh.practice3;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.kh.practice3.controller.MusicController;
+import com.kh.practice3.model.Music;
 
 public class Application {
 	
@@ -15,6 +17,9 @@ public class Application {
 		app.menu();
 
 	}
+	
+	/*compareTo
+	 * */
 	
 	public void menu() {
 		try {
@@ -60,25 +65,52 @@ public class Application {
 	
 	//1. 특정 곡 추가
 	public void addList() {
-		/*
-		 * ****** 특정 곡 추가 ******
-		 * 곡명 : 
-		 * 가수명 : 
-		 * 
-		 * 곡 추가 성공하면 "추가 성공"
-		 *        실패하면 "추가 실패"
-		 * */
+
+			  System.out.println("특정 곡 추가");
+			  System.out.println("곡명 :");
+			  String song = sc.nextLine();
+			  System.out.println("가수명 :");
+			  String name = sc.nextLine();
+			 
+			  if(mc.addList(artist, song)) {
+				  System.out.println("성공");
+			  }else {
+				  System.out.println("실패");
+			  }
+				 
 	}
+	
+			
+
+	
 	
 	//2. 전체 곡 목록 출력
 	public void printAll() {
+		System.out.println("****** 전체 곡 목록 출력 ******");
+		ArrayList<Music> result = mc.printAll();
+		if(result.isEmpty()) {
+		System.out.println(mc.printAll());
+	}else {
+		for(Music music : result) {
+			System.out.println(music);
+		}
+	}
 		/*
 		 * ****** 전체 곡 목록 출력 ******
 		 * */
-	}
+}
 	
 	//3. 특정 곡 검색
 	public void searchMusic() {
+		System.out.println("****** 특정 곡 검색 ******");
+		System.out.println("키워드 검색 : ");
+		String keywrod = sc.nextLine();
+		Music result = mc.searchMusic(keywrod);
+		if(result != null) {
+			System.out.println(result.getArtist() + result.getSong() + "을 검색했습니다.");
+		}else {
+			System.out.println("검색할 곡을 찾지 못했습니다");
+		}
 		/*
 		 * ****** 특정 곡 검색 ******
 		 * 검색할 곡명 : 
@@ -91,6 +123,29 @@ public class Application {
 	
 	//4. 특정 곡 수정
 	public void updateMusic() {
+		System.out.println("특정 곡 수정");
+		System.out.println("검색할 곡명 : ");
+		String searchSong = sc.nextLine();
+		
+		ArrayList<Music> result = mc.checkMusic(searchSong);
+		if(result.size() > 1 ) {
+			for(Music music : result) {
+				System.out.println(music);
+			}
+			System.out.println("가수명 입력 : ");
+			searchArtist = sc.nextLine();
+		}
+		
+		System.out.println("수정할 곡명 : ");
+		String updateSong = sc.nextLine();
+		System.out.println("수정할 가수명: ");
+		String updateArtist = sc.nextLine();
+		Music update = mc.updateMusic(searchSong, searchArtist, new Music(updateSong, updateArtist));
+		if(update !=null) {
+			System.out.println(update.getArtist() + "-" + update.getSong() + " 을 수정했습니다");		
+		} else {
+			System.out.println("기존에 이미 있는 곡 입니다.");
+		}
 		/*
 		 * ****** 특정 곡 수정 ******
 		 * 검색할 곡명 : 
@@ -104,12 +159,42 @@ public class Application {
 	
 	//5. 특정 곡 삭제
 	public void removeMusic() {
-		/*
-		 * ****** 특정 곡 삭제 ******
-		 * 삭제할 곡명 : 
-		 * 
-		 * 삭제에 성공한다면 "(삭제한 가수 - 삭제한 곡)을 삭제했습니다."
-		 *      실패한다면 "삭제할 곡이 없습니다."
-		 * */	
+		System.out.println("특정 곡 삭제 ");
+		System.out.println("삭제할 곡명");
+		String song = sc.nextLine();
+		
+		String artist = checkMusic(song);
+		
+		Music result = mc.removeMusic(song);
+		
+		
+		
+		if(result != null) {
+			System.out.println(result.getArtist() + "-" + song);
+		}else {
+			System.out.println("삭제할 곡이 없습니다");
+		}
+		
+		
 	}
+	public String checkMusic(String song) {
+		ArrayList<Music> result = mc.checkMusic(searchSong);
+		if(result.size() > 1 ) {
+			for(Music music : result) {
+				System.out.println(music);
+			}
+			System.out.println("가수명 입력 : ");
+			searchArtist = sc.nextLine();
+		}	
+	}
+	return searchArtist;
+
+public void descArtist() {
+	System.out.println("****가 수 명 내 림 차 순 정 렬 ****");
+	ArrayList<Music> list = mc.descArtist();
+	for(Music music : list) {
+		System.out.println(music);
+	}
+	
+}
 }

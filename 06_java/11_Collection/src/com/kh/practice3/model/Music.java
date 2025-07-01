@@ -1,20 +1,22 @@
 package com.kh.practice3.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder.ObtainVia;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Music {
+public class Music implements Comparable{
 
 	private String artist;
 	private String song;
 	
-	public boolean registerAndSelect(String artist, String song) {
-		
-		
+	
+	@Override
+	public int compareTo(Music o) {
+		return this.artist.compareTo(o.artist);
 	}
 	
 
