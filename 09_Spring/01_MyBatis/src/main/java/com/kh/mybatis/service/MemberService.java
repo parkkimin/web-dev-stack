@@ -11,27 +11,39 @@ import com.kh.mybatis.model.vo.Member;
 
 @Service
 public class MemberService {
-
+	
 	@Autowired
 	private MemberMapper mapper;
 	
 	public void register(Member member) {
 		mapper.register(member);
-	}		
+	}
+	
 	public Member login(Member member) {
 		return mapper.login(member);
 	}
-	public List<Member> allMember(){
+	
+	public List<Member> allMember() {
 		return mapper.allMember();
 	}
+	
 	public void update(Member member) {
 		mapper.update(member);
 	}
+
 	public void delete(String id) {
 		mapper.delete(id);
 	}
-	public List<Member> search(SearchDTO dto){
+	
+	public List<Member> search(SearchDTO dto) {
 		return mapper.search(dto);
 	}
-
+	
+	public void selectDelete(List<String> idList) {
+		mapper.selectDelete(idList);
+	}
 }
+
+
+
+

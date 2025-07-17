@@ -15,5 +15,9 @@ public interface MemberMapper {
 	void update(Member vo);
 	void delete(String id);
 	List<Member> search(SearchDTO dto);
+	void selectDelete(List<String> idList);
 }
+
+
+
 
